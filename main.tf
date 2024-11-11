@@ -7,7 +7,7 @@ resource "aws_lambda_function" "my_lambda" {
   function_name = "MyLambdaFunction"
   role          = aws_iam_role.lambda_role.arn
   handler       = "index.handler"
-  runtime       = "nodejs14.x"
+  runtime       = "nodejs18.x"  # Updated runtime
   filename      = "lambda.zip"  # Lambda code package
 }
 
